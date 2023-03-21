@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Customer\Model\Data\Customer">
+        <plugin name="andremartos_removewhitespace_clean_first_name" type="AndreMartos\RemoveWhiteSpace\Plugin\Customer\Data\Customer" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\Customer\Controller\Account\CreatePost">
+        <plugin name="AndreMartos_RemoveWhiteSpace" type="AndreMartos\RemoveWhiteSpace\Plugin\CustomerCreatePost" sortOrder="1" disabled="false"/>
+    </type>
+</config>

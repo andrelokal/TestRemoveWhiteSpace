@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="andre" translate="label" sortOrder="10">
+            <label>Andre</label>
+        </tab>
+        <section id="removewhite_space" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Email</label>
+            <tab>andre</tab>
+            <resource>AndreMartos_RemoveWhiteSpace::config</resource>
+            <group id="settings" translate="label" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+                <label>Email Configuration</label>
+                <field id="subject" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Assunto do E-mail</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="email_template" type="select" sortOrder="60" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Template</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
